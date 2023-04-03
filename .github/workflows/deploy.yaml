@@ -16,9 +16,9 @@ jobs:
         uses: sand4rt/ftp-deployer@v1.4
         with:
           sftp: true
-          host: oxygen.monom.org
+          host: ${{ secrets.SFTP_SERVER }}
           port: 22
-          username: linux-nvme
+          username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           remote_folder: '/upload'
           local_folder: '.'
